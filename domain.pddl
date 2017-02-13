@@ -37,7 +37,7 @@
        Green - WorkpieceColor
        Yellow - WorkpieceColor
        Orange - WorkpieceColor
-       Gray - WorkpieceColor
+       Grey - WorkpieceColor
     )
     (:predicates
       (above ?wor - Workpiece ?wor1 - Workpiece)
