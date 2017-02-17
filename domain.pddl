@@ -21,6 +21,7 @@
       MachineSide - object
       OrderSizeType - object
       WorkpieceColor - object
+      MachineState - object
     )
     (:constants
        InputSide - MachineSide
@@ -38,6 +39,14 @@
        Yellow - WorkpieceColor
        Orange - WorkpieceColor
        Grey - WorkpieceColor
+       IDLE - MachineState
+       BROKEN - MachineState
+       PREPARED - MachineState
+       PROCESSING - MachineState
+       PROCESSED - MachineState
+       READY-AT-OUTPUT - MachineState
+       WAIT-IDLE - MachineState
+       DOWN - MachineState
     )
     (:predicates
       (above ?wor - Workpiece ?wor1 - Workpiece)
@@ -53,6 +62,7 @@
       (filled ?ord - Order)
       (orderPossibleDeliverySlide ?ord - Order ?slide - DeliverySlide)
       (machineOwner ?mac - Machine ?tea - Team)
+      (machineState ?mac - machine ?ms - MachineState)
       (capInSlide ?cap - CapStation ?cap1 - CapWorkpiece)
       (robotOwner ?rob - Robot ?tea - Team)
       (at ?rob - Robot ?loc - Location)
